@@ -143,11 +143,13 @@ function setUserImagesMargin() {
 function toggleModal() {
     const modal = $('.app_modal');
 
-    $('.modal_trigger_btn').click(function() {
+    $('.modal_trigger_btn').click(function(event) {
+        event.preventDefault();
         modal.addClass('open')
     });
 
     $('.close_modal_btn, .app_modal-overlay').click(function() {
+        event.preventDefault();
         modal.removeClass('open')
     });
 }
