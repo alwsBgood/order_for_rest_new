@@ -50,8 +50,6 @@ function confirmationMsgEvents() {
 
     let elemScrollTop = $(window).scrollTop() - elementBottom ;
 
-    console.log(elemScrollTop);
-
     if(elemScrollTop < 1) {
         fixedElem.removeClass('visible');
     } else {
