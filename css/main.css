@@ -1,0 +1,634 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  background-color: #ebebed;
+  color: #565656; }
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 15px; }
+
+a {
+  -webkit-transition: color .3s;
+  transition: color .3s; }
+
+.text--title {
+  font-weight: 700; }
+
+.text--orange {
+  color: #ff6a44; }
+
+.text--gray {
+  color: #9ea9ae; }
+
+.text--italic {
+  font-style: italic; }
+
+.flex-between {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.order_rest-header {
+  text-align: center; }
+
+.order_rest-header_logo {
+  display: inline-block;
+  max-width: 119px;
+  padding: 5px 0 17px; }
+  .order_rest-header_logo img {
+    width: 100%; }
+
+.two_images_block img + img,
+.two_images_block a + a,
+.two_images_block a + img {
+  margin-left: -18px; }
+
+.threee_images_block img + img,
+.threee_images_block a + a,
+.threee_images_block a + img {
+  margin-left: -20px; }
+
+.four_images_block img + img,
+.four_images_block a + a,
+.four_images_block a + img {
+  margin-left: -22px; }
+
+.five_images_block img + img,
+.five_images_block a + a,
+.five_images_block a + img {
+  margin-left: -24px; }
+
+.six_images_block img + img,
+.six_images_block a + a,
+.six_images_block a + img {
+  margin-left: -26px; }
+
+.user_pic {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #fff; }
+
+.order_rest-status_message {
+  margin: 15px 0; }
+
+.status_message-block {
+  display: none;
+  width: 100%;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 16px 16px 16px 24px;
+  color: #fff; }
+  .status_message-block .status_message-user {
+    opacity: .7;
+    display: block; }
+  .status_message-block .satus_message-users_pics {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 15%;
+    -ms-flex: 1 1 15%;
+    flex: 1 1 15%;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 10px; }
+  .status_message-block .status_message-text {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 60%;
+    -ms-flex: 1 1 60%;
+    flex: 1 1 60%; }
+  .status_message-block .status_message-status_text {
+    margin-top: 3px;
+    font-family: GothamProMedium;
+    font-size: 10px;
+    line-height: 1.1;
+    letter-spacing: 0.1px;
+    text-align: left;
+    text-transform: uppercase; }
+  .status_message-block .status_message-button {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 17%;
+    -ms-flex: 1 1 17%;
+    flex: 1 1 17%; }
+
+.status_message-block--fixed {
+  position: fixed;
+  max-width: 290px;
+  width: 100%;
+  height: 48px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #13b86e !important;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(142, 142, 147, 0.4);
+  box-shadow: 0 8px 16px 0 rgba(142, 142, 147, 0.4);
+  color: #fff;
+  text-align: center;
+  left: 50%;
+  bottom: 28px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 10; }
+
+.status_message-block + .status_message-block {
+  margin-top: 15px; }
+
+.status_message-type--waiting_for_confiramtion,
+.status_message-type--waiting_for_confiramtions {
+  background-color: rgba(255, 171, 64, 0.8); }
+
+.status_message-type--orders_confirmed,
+.status_message-type--order_confirmed {
+  background-color: rgba(19, 184, 110, 0.8); }
+
+.status_message-type--orders_canceled,
+.status_message-type--order_canceled {
+  background-color: rgba(255, 97, 93, 0.8); }
+
+.status_message-type--already_accepted_message {
+  background-color: rgba(6, 168, 236, 0.8); }
+
+.accept_button_visible .oder_rest-accept_button_wrapper {
+  display: block; }
+
+.waiting_for_confiramtion .status_message-type--waiting_for_confiramtion {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.order_confirmed .status_message-type--order_confirmed {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.order_confirmed .status_message-block--fixed {
+  display: none; }
+
+.order_confirmed .status_message-block--fixed.visible {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.order_canceled .order_short_info {
+  background-color: #ff615d;
+  color: #fff; }
+  .order_canceled .order_short_info .main_content-title {
+    color: #fff; }
+
+.order_canceled .status_message-type--order_canceled {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.already_accepted_message .status_message-type--already_accepted_message {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.group.waiting_for_confiramtion .status_message-type--waiting_for_confiramtions {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.group.order_confirmed .status_message-type--orders_confirmed {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.group.order_canceled .status_message-type--orders_canceled {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.status_message-button {
+  height: 32px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  border: solid 2px #ffffff;
+  background: transparent;
+  font-size: 11px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 3px 5px;
+  max-width: 78px; }
+  .status_message-button:hover {
+    color: #ff6a44;
+    background-color: #fff; }
+
+.accept_buton {
+  max-width: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 40px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #ff6a44;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+  .accept_buton:hover {
+    background-color: #E73F14; }
+
+.accept_buton.accept_buton--static {
+  visibility: hidden; }
+
+.accept_buton--fixed {
+  position: fixed;
+  bottom: 30px;
+  width: 230px;
+  -webkit-box-shadow: 0 8px 16px 0 rgba(142, 142, 147, 0.4);
+  box-shadow: 0 8px 16px 0 rgba(142, 142, 147, 0.4);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.accept_buton--fixed.static {
+  width: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-left: 0;
+  position: absolute;
+  top: -32px;
+  -webkit-transform: translateY(62px) translateX(-50%);
+  -ms-transform: translateY(62px) translateX(-50%);
+  transform: translateY(62px) translateX(-50%); }
+
+.oder_rest-accept_button_wrapper {
+  position: relative;
+  display: none;
+  padding: 30px 0 5px;
+  width: 100%;
+  max-width: 450px; }
+
+.oder_rest-accept_button_wrapper.static {
+  position: static; }
+
+.user_order_block .main_content-user_order_wrapper {
+  display: none; }
+
+.user_order_block .main_content-user_info {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  padding: 10px 30px 10px 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.user_order_block .info-user-user_pic {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.user_order_block .icon_chevron {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -12px; }
+
+.user_order_block a {
+  color: #565656; }
+  .user_order_block a:hover {
+    color: #ff6a44; }
+
+.user_order_block.open .icon_chevron {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg); }
+
+.user_info-status_text {
+  margin-top: 3px;
+  font-family: GothamProMedium;
+  font-size: 10px;
+  line-height: 1.1;
+  letter-spacing: 0.1px;
+  text-align: left; }
+  .user_info-status_text span {
+    display: none; }
+
+.user_info-status_text.order_confirmed .status_text--order_confirmed {
+  display: block; }
+
+.user_info-status_text.order_canceled .status_text--order_canceled {
+  display: block; }
+
+.user_info-status_text.order_waitnig .status_text--order_waitnig {
+  display: block; }
+
+.status_text--order_confirmed {
+  color: #13b86e; }
+
+.status_text--order_canceled {
+  color: #ff615d; }
+
+.status_text--order_waitnig {
+  color: #ffab40; }
+
+.main_content-title {
+  font-size: 18px;
+  line-height: 1.22;
+  color: #232323; }
+  .main_content-title .order_info-adress_title {
+    display: inline-block; }
+
+.order_rest-main_content {
+  background-color: #fdfdfd;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  padding: 10px 25px 10px; }
+
+.order_rest-main_content + .order_rest-main_content {
+  margin-top: 15px; }
+
+.main_content-block {
+  padding: 18px 0 12px;
+  border-bottom: 1px solid #e3e3e3; }
+
+.main_content-block--border_top {
+  padding-top: 10px;
+  margin-top: 8px;
+  border-top: 1px solid #e3e3e3; }
+
+.order_short_info-content {
+  padding: 10px 0; }
+  .order_short_info-content .main_content-title {
+    margin-bottom: 15px; }
+  .order_short_info-content .order_short_info-users_pics {
+    margin-top: 10px; }
+
+.order_item {
+  line-height: 23px; }
+  .order_item .order_position-price_description {
+    padding-right: 20px; }
+
+.order_comment {
+  line-height: 22px;
+  padding-top: 10px; }
+
+.order_amount {
+  line-height: 26px;
+  border: none; }
+
+.order_group_check {
+  padding-top: 25px; }
+
+.order_rest-addtional_info {
+  padding: 25px 0; }
+
+.adition_info-list {
+  padding: 0 10px 0 35px; }
+
+.aditional_info-list--item {
+  position: relative; }
+  .aditional_info-list--item:before {
+    content: '';
+    position: absolute;
+    left: -23px;
+    top: 6px;
+    width: 4px;
+    height: 4px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #565656; }
+
+.aditional_info-list--item + .aditional_info-list--item {
+  margin-top: 6px;
+  line-height: 21px; }
+
+.order_rest-support_contacts {
+  text-align: center;
+  padding: 26px;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  margin-top: 30px; }
+  .order_rest-support_contacts .support_contacts-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 15px; }
+  .order_rest-support_contacts .support_contacts-phone {
+    text-decoration: underline; }
+
+.order-rest-email_wrap {
+  text-align: center;
+  padding: 30px 0 15px; }
+  .order-rest-email_wrap .order-rest-email {
+    text-decoration: underline; }
+
+.order_rest-footer {
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 45px; }
+
+.app_modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.2px;
+  text-align: left; }
+  .app_modal .text--gray {
+    color: #8e8e93; }
+  .app_modal .close_modal_btn {
+    position: absolute;
+    display: block;
+    padding: 5px;
+    right: 15px;
+    top: 15px; }
+
+.app_modal.open {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .app_modal.open .app_modal-content {
+    -webkit-animation: scale-in-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: scale-in-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+.app_modal-col_1 {
+  float: left;
+  width: 60%; }
+
+.app_modal-col_2 {
+  float: left;
+  width: 40%;
+  padding-left: 10px; }
+
+.app_modal-overlay {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.9;
+  background-color: #2c2c2e; }
+
+.app_modal-content {
+  position: relative;
+  z-index: 2;
+  max-width: 625px;
+  width: 100%;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #ebebee;
+  padding: 40px 35px 0 45px;
+  overflow: hidden; }
+  .app_modal-content .modal_header {
+    margin: 24px 0 8px; }
+  .app_modal-content .app_modal_list {
+    margin: 15px 0 25px;
+    padding-left: 17px;
+    list-style: disc; }
+    .app_modal-content .app_modal_list li + li {
+      margin-top: 8px; }
+
+.app_modal-user_data_wrapper {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 8px 16px;
+  margin-top: 30px;
+  margin-bottom: 40px; }
+  .app_modal-user_data_wrapper .text--title {
+    color: #242424; }
+  .app_modal-user_data_wrapper .app_modal-user_data_label {
+    color: #8e8e93;
+    padding-right: 30px; }
+  .app_modal-user_data_wrapper .app_modal-user_data + .app_modal-user_data {
+    margin-top: 5px; }
+  .app_modal-user_data_wrapper .app_modal-user_data {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .app_modal-user_data_wrapper .app_modal-user_data .app_modal-user_data_label {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 35%;
+      -ms-flex: 1 1 35%;
+      flex: 1 1 35%; }
+    .app_modal-user_data_wrapper .app_modal-user_data .app_modal-user_data {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 65%;
+      -ms-flex: 1 1 65%;
+      flex: 1 1 65%; }
+
+.app_modal-phone_img {
+  margin-top: 15px;
+  margin-bottom: -70px;
+  width: 100%;
+  max-width: 236px; }
+
+.scale-in-center {
+  -webkit-animation: scale-in-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; } }
+
+@media screen and (max-width: 470px) {
+  .app_modal .app_modal-col_1 {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    float: none; }
+  .app_modal .app_modal-col_2 {
+    display: none; } }
+
+@media screen and (max-width: 430px) {
+  .user_order_block .user_info-customer_phone {
+    display: block; }
+  .app_modal .app_modal-app_links img {
+    width: 45%; } }
+
+@media screen and (max-width: 340px) {
+  .status_message-block {
+    padding: 10px; } }
