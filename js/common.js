@@ -5,8 +5,8 @@ if(order_ammount === 1) {
     $('#accept_button').html('ACCEPT ORDER');
     $('#accept_button_fixed').html('ACCEPT ORDER');
 } else {
-    $('#accept_button').html('ACCEPT ALL ORDER');
-    $('#accept_button_fixed').html('ACCEPT ALL ORDER');
+    $('#accept_button').html('ACCEPT ALL ORDERS');
+    $('#accept_button_fixed').html('ACCEPT ALL ORDERS');
 }
 //-=====-=====-======-=====-=====
 
