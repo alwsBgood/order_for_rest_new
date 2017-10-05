@@ -562,7 +562,8 @@ a {
   .order_rest-banner_wrapper .container {
     padding: 0; }
   .order_rest-banner_wrapper .banner-small_text {
-    font-size: 10px; }
+    font-size: 10px;
+    letter-spacing: .02em; }
   .order_rest-banner_wrapper .banner-title {
     line-height: 19px; }
   .order_rest-banner_wrapper .modal_trigger_btn {
