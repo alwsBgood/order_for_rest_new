@@ -146,16 +146,31 @@ function setUserImagesMargin() {
 
 function toggleModal() {
     const modal = $('.app_modal');
+    let currentPosition = 0;
 
     $('.modal_trigger_btn').click(function(event) {
         event.preventDefault();
-        modal.addClass('open')
+        modal.addClass('open');
+        currentPosition =  $(window).scrollTop();
+
+        $('body').addClass('unscroll').css({
+            top: -currentPosition
+          });
     });
 
     $('.close_modal_btn, .app_modal-overlay').click(function() {
         event.preventDefault();
-        modal.removeClass('open')
+        modal.removeClass('open');
+
+        $('body').removeClass('unscroll');
+        $(window).scrollTop(currentPosition);
     });
+}
+
+function closeBanner() {
+    $('.close_banner_btn').click(function() {
+        $('.order_rest-page').removeClass('banner_visible')
+    })
 }
 
 $(document).ready(function() {
@@ -165,4 +180,5 @@ $(document).ready(function() {
     confirmationMsgEvents();
     setUserImagesMargin();
     toggleModal();
+    closeBanner();
 })

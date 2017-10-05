@@ -11,6 +11,12 @@ body {
   background-color: #ebebed;
   color: #565656; }
 
+body.unscroll {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
 .container {
   position: relative;
   width: 100%;
@@ -177,6 +183,18 @@ a {
 .status_message-type--already_accepted_message {
   background-color: rgba(6, 168, 236, 0.8); }
 
+.order_rest-page {
+  -webkit-transition: padding .4s;
+  transition: padding .4s;
+  padding-top: 0px; }
+
+.order_rest-page.banner_visible {
+  padding-top: 60px; }
+  .order_rest-page.banner_visible .order_rest-banner_wrapper {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px); }
+
 .accept_button_visible .oder_rest-accept_button_wrapper {
   display: block; }
 
@@ -326,6 +344,9 @@ a {
 
 .oder_rest-accept_button_wrapper.static {
   position: static; }
+
+.modal_trigger_btn {
+  cursor: pointer; }
 
 .user_order_block .main_content-user_order_wrapper {
   display: none; }
@@ -521,6 +542,49 @@ a {
   text-align: center;
   font-size: 12px;
   padding-bottom: 45px; }
+
+.order_rest-banner_wrapper {
+  position: absolute;
+  z-index: 10;
+  -webkit-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  transform: translateY(-100px);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  top: 0px;
+  left: 0;
+  right: 0;
+  height: 56px;
+  padding: 12px 20px;
+  background-color: #f5f5fa; }
+  .order_rest-banner_wrapper .container {
+    padding: 0; }
+  .order_rest-banner_wrapper .banner-small_text {
+    font-size: 10px; }
+  .order_rest-banner_wrapper .banner-title {
+    line-height: 19px; }
+  .order_rest-banner_wrapper .modal_trigger_btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .order_rest-banner_wrapper .banner-img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px; }
+  .order_rest-banner_wrapper .close_banner_btn {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 5px;
+    right: 20px;
+    display: block; }
+    .order_rest-banner_wrapper .close_banner_btn img {
+      width: 16px; }
 
 .app_modal {
   display: none;
