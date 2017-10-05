@@ -110,10 +110,12 @@ function setUserImagesMargin() {
    $('.user_pics_wrapper').each(function() {
         const elemAmmount = $("img, a", $(this)).length;
 
-        if(elemAmmount === 2) {
+        if(elemAmmount === 1) {
+            $(this).addClass('one_image_block')
+        } else if(elemAmmount === 2) {
             $(this).addClass('two_images_block')
         } else if(elemAmmount === 3) {
-            $(this).addClass('threee_images_block')
+            $(this).addClass('three_images_block')
         } else if(elemAmmount === 4) {
             $(this).addClass('four_images_block')
         } else if(elemAmmount === 5) {
@@ -126,10 +128,12 @@ function setUserImagesMargin() {
     $('.order_short_info-users_pics').each(function() {
         const elemAmmount = $(this).children().length;
 
-        if(elemAmmount === 2) {
+        if(elemAmmount === 1) {
+            $(this).addClass('one_image_block')
+        } else if(elemAmmount === 2) {
             $(this).addClass('two_images_block')
         } else if(elemAmmount === 3) {
-            $(this).addClass('threee_images_block')
+            $(this).addClass('three_images_block')
         } else if(elemAmmount === 4) {
             $(this).addClass('four_images_block')
         } else if(elemAmmount === 5) {

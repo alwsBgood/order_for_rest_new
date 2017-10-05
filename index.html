@@ -43,8 +43,8 @@
 
 </head>
 <body>
-    <!-- change class "succesful_order" "already_accepted" "accept_button_visible" to show message -->
-    <div class="order_rest-page waiting_for_confiramtion order_confirmed order_canceled already_accepted_message accept_button_visible group">
+    <!-- change class to show message -->
+    <div class="order_rest-page waiting_for_confiramtion  order_canceled already_accepted_message order_total_canceled accept_button_visible group">
         <div class="container">
             <header class="order_rest-header">
                 <a class="order_rest-header_logo" href="https://allsetnow.com/"><img src="https://allsetnow.com/static/external/emails/logo@3x.png" alt="Allset logo"></a>
@@ -57,20 +57,24 @@
 
                     <p class="main_content-text"><span class="text--title">Reservation:</span> <span class="order_info-visit_at--day">Today (Fri, Dec 2)</span>, table for <span class="order_info-people_number" >4</span> at <span class="order_info-visit_at--time">12:00 PM</span></p>
 
-                    <div class="order_short_info-users_pics">
-                        <a data-id='user_id-1' href="#user_id-1" class="info_user-user-link scroll">
-                            <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
-                        </a>
+                    <div class="order_short_info-pics_wrapper">
+                        <div class="order_short_info-users_pics">
+                            <a data-id='user_id-1' href="#user_id-1" class="info_user-user-link scroll">
+                                <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
+                            </a>
+    
+                            <a data-id='user_id-2' href="#user_id-2" class="info_user-user-link scroll">
+                                <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
+                            </a>
+    
+                            <a data-id='user_id-3' href="#user_id-3" class="info_user-user-link scroll">
+                                <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
+                            </a>
+    
+                            <img src="./img/ic-av-empty.png" srcset="./img/ic-av-empty@2x.png 2x" alt="User Avatar" class="info-user-user_pic empty_user_pic">
+                        </div>
 
-                        <a data-id='user_id-2' href="#user_id-2" class="info_user-user-link scroll">
-                            <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
-                        </a>
-
-                        <a data-id='user_id-3' href="#user_id-3" class="info_user-user-link scroll">
-                            <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
-                        </a>
-
-                        <img src="./img/ic-av-empty.png" srcset="./img/ic-av-empty@2x.png 2x" alt="User Avatar" class="info-user-user_pic empty_user_pic">
+                        <p class="order_short_info-join_text text--italic">More people will join this reservation. <br> Please expect more orders soon.</p>
                     </div>
                 </div>
             </div>
