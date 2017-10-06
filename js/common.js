@@ -158,7 +158,7 @@ function toggleModal() {
           });
     });
 
-    $('.close_modal_btn, .app_modal-overlay').click(function() {
+    $('.close_modal_btn, .app_modal-overlay').click(function(event) {
         event.preventDefault();
         modal.removeClass('open');
 
