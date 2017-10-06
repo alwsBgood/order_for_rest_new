@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="no-js" lang="ru">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
 
-    <title></title>
+    <title>Orders</title>
 
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -22,7 +22,7 @@
 
     <meta property="og:site_name" content="CompanyName"/>
     <meta property="og:title" content="" />
-    <meta property="og:url" content=""/>
+    <meta property="og:url" content=""/> -->
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
@@ -31,7 +31,7 @@
     <link rel="manifest" href="img/favicon/manifest.json">
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff"> -->
+    <meta name="theme-color" content="#ff6a44">
 
     <!-- RESET -->
     <style>html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{box-sizing:border-box}html,body{margin:0;width:100%}.container{max-width:1200px;margin:0 auto}a,button,img,input{-webkit-transition:all .5s;transition:all .5s}button,button:active,button:focus,input,input:active,input:focus,textarea,textarea:active,textarea:focus{outline:none}button,button:hover,a,a:hover{text-decoration:none;cursor:pointer}.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:before,.clearfix:after,.container:before,.container:after{content:'.';display:block;overflow:hidden;visibility:hidden;font-size:0;line-height:0;width:0;height:0}.clearfix:after,.container:after{clear:both}.left{float:left}.right{float:right}.tl{text-align:left}.tr{text-align:right}.tc{text-align:center}.flex{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}a,button,input,textarea{text-decoration:none;outline:0;border:0;-webkit-transition:color .4s ease,background-color .4s ease,background-image .4s ease,border-color .4s ease;transition:color .4s ease,background-color .4s ease,background-image .4s ease,border-color .4s ease}a:focus,button:focus,input:focus,textarea:focus{outline:0}input,textarea{-webkit-box-sizing:border-box;box-sizing:border-box}textarea{resize:none}button:hover,a:hover{cursor:pointer}.cf:after,.cf:before{content:" ";display:table}.cf:after{clear:both}</style>
@@ -43,8 +43,22 @@
 
 </head>
 <body>
-    <!-- change class "succesful_order" "already_accepted" "accept_button_visible" to show message -->
-    <div class="order_rest-page waiting_for_confiramtion order_confirmed order_canceled already_accepted_message accept_button_visible group">
+    <!-- change class to show message -->
+    <div class="order_rest-page waiting_for_confiramtion order_confirmed order_canceled already_accepted_message banner_visible order_total_canceled accept_button_visible group more_orders_text">
+        <div class="order_rest-banner_wrapper">
+            <a href="#" class="close_banner_btn">
+                <img src="img/ic-close.svg" alt="Close modal">
+            </a>
+            <div class="container">
+                <div class="modal_trigger_btn">
+                    <img class="banner-img" src="img/logo-symbol.png" srcset="img/logo-symbol@2x.png 2x" alt="Allset logo">
+                    <div class="banner_text_wrapper">
+                        <p class="banner-title text--orange text--title">Install Merchant App</p>
+                        <p class="banner-small_text text--gray text--title">Learn More</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <header class="order_rest-header">
                 <a class="order_rest-header_logo" href="https://allsetnow.com/"><img src="https://allsetnow.com/static/external/emails/logo@3x.png" alt="Allset logo"></a>
@@ -57,20 +71,25 @@
 
                     <p class="main_content-text"><span class="text--title">Reservation:</span> <span class="order_info-visit_at--day">Today (Fri, Dec 2)</span>, table for <span class="order_info-people_number" >4</span> at <span class="order_info-visit_at--time">12:00 PM</span></p>
 
-                    <div class="order_short_info-users_pics">
-                        <a data-id='user_id-1' href="#user_id-1" class="info_user-user-link scroll">
-                            <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
-                        </a>
+                    <div class="order_short_info-pics_wrapper">
+                        <div class="order_short_info-users_pics">
+                            <a data-id='user_id-1' href="#user_id-1" class="info_user-user-link scroll">
+                                <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
+                            </a>
+    
+                            <a data-id='user_id-2' href="#user_id-2" class="info_user-user-link scroll">
+                                <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
+                            </a>
+    
+                            <a data-id='user_id-3' href="#user_id-3" class="info_user-user-link scroll">
+                                <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
+                            </a>
+    
+                            <img src="./img/ic-av-empty.png" srcset="./img/ic-av-empty@2x.png 2x" alt="User Avatar" class="info-user-user_pic empty_user_pic">
+                            <img src="./img/ic-av-empty.png" srcset="./img/ic-av-empty@2x.png 2x" alt="User Avatar" class="info-user-user_pic empty_user_pic">
+                        </div>
 
-                        <a data-id='user_id-2' href="#user_id-2" class="info_user-user-link scroll">
-                            <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
-                        </a>
-
-                        <a data-id='user_id-3' href="#user_id-3" class="info_user-user-link scroll">
-                            <img src="./img/ic-av-user.png" srcset="./img/ic-av-user@2x.png 2x" alt="User Avatar" class="info-user-user_pic user_pic">
-                        </a>
-
-                        <img src="./img/ic-av-empty.png" srcset="./img/ic-av-empty@2x.png 2x" alt="User Avatar" class="info-user-user_pic empty_user_pic">
+                        <p class="order_short_info-join_text text--italic">More people will join this reservation. <br> Please expect more orders soon.</p>
                     </div>
                 </div>
             </div>
@@ -393,7 +412,7 @@
             <!-- Support sec -->
             <div class="order_rest-support_contacts">
                 <p class="support_contacts-title">Having issues with this order?</p>
-                <a href="tel:(415) 812-3844" class="support_contacts-phone text--orange">Call Allset Support at (415) 812-3844</a>
+                <a href="tel:4158123844" class="support_contacts-phone text--orange">Call Allset Support at (415) 812-3844</a>
             </div>
 
             <!-- Info sec -->
@@ -401,7 +420,7 @@
                 <ul class="adition_info-list">
                     <li class="aditional_info-list--item">If provided, please put Allset’s reservation sign on the table.</li>
                     <li class="aditional_info-list--item">Please serve the food within 5 minutes after the guest arrives. <br> Do not serve any food before arrival.</li>
-                    <li class="aditional_info-list--item">If guests are late, please keep the food heated in the kitchen.</li class="aditional_info-list--item">
+                    <li class="aditional_info-list--item">If guests are late, please keep the food heated in the kitchen.</li>
                     <li class="aditional_info-list--item"> Do not bring any menu or check, the order is already paid and tipped through the app.</li>
                     <li class="aditional_info-list--item">At the end of the meal, just tell guests that they are "all set" and free to go.</li>
                     <li class="aditional_info-list--item">Every restaurant has their own way of preparing the food for a particular time, and we respect that.</li>

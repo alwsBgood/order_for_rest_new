@@ -5,8 +5,8 @@ if(order_ammount === 1) {
     $('#accept_button').html('ACCEPT ORDER');
     $('#accept_button_fixed').html('ACCEPT ORDER');
 } else {
-    $('#accept_button').html('ACCEPT ALL ORDER');
-    $('#accept_button_fixed').html('ACCEPT ALL ORDER');
+    $('#accept_button').html('ACCEPT ALL ORDERS');
+    $('#accept_button_fixed').html('ACCEPT ALL ORDERS');
 }
 //-=====-=====-======-=====-=====
 
@@ -110,10 +110,12 @@ function setUserImagesMargin() {
    $('.user_pics_wrapper').each(function() {
         const elemAmmount = $("img, a", $(this)).length;
 
-        if(elemAmmount === 2) {
+        if(elemAmmount === 1) {
+            $(this).addClass('one_image_block')
+        } else if(elemAmmount === 2) {
             $(this).addClass('two_images_block')
         } else if(elemAmmount === 3) {
-            $(this).addClass('threee_images_block')
+            $(this).addClass('three_images_block')
         } else if(elemAmmount === 4) {
             $(this).addClass('four_images_block')
         } else if(elemAmmount === 5) {
@@ -126,10 +128,12 @@ function setUserImagesMargin() {
     $('.order_short_info-users_pics').each(function() {
         const elemAmmount = $(this).children().length;
 
-        if(elemAmmount === 2) {
+        if(elemAmmount === 1) {
+            $(this).addClass('one_image_block')
+        } else if(elemAmmount === 2) {
             $(this).addClass('two_images_block')
         } else if(elemAmmount === 3) {
-            $(this).addClass('threee_images_block')
+            $(this).addClass('three_images_block')
         } else if(elemAmmount === 4) {
             $(this).addClass('four_images_block')
         } else if(elemAmmount === 5) {
@@ -142,14 +146,31 @@ function setUserImagesMargin() {
 
 function toggleModal() {
     const modal = $('.app_modal');
+    let currentPosition = 0;
 
-    $('.modal_trigger_btn').click(function() {
-        modal.addClass('open')
+    $('.modal_trigger_btn').click(function(event) {
+        event.preventDefault();
+        modal.addClass('open');
+        currentPosition =  $(window).scrollTop();
+
+        $('body').addClass('unscroll').css({
+            top: -currentPosition
+          });
     });
 
-    $('.close_modal_btn, .app_modal-overlay').click(function() {
-        modal.removeClass('open')
+    $('.close_modal_btn, .app_modal-overlay').click(function(event) {
+        event.preventDefault();
+        modal.removeClass('open');
+
+        $('body').removeClass('unscroll');
+        $(window).scrollTop(currentPosition);
     });
+}
+
+function closeBanner() {
+    $('.close_banner_btn').click(function() {
+        $('.order_rest-page').removeClass('banner_visible')
+    })
 }
 
 $(document).ready(function() {
@@ -159,4 +180,5 @@ $(document).ready(function() {
     confirmationMsgEvents();
     setUserImagesMargin();
     toggleModal();
+    closeBanner();
 })
